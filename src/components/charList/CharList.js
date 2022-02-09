@@ -43,7 +43,7 @@ const CharList = (props) => {
 
     const focusOnItem = (id) => {
         itemRefs.current.forEach(item => item.classList.remove('char__item_selected'));
-        itemRefs.current[id].classList.add('сhar_item_selected');
+        itemRefs.current[id].classList.add('char__item_selected');
         itemRefs.current[id].focus();
     }
 
@@ -65,12 +65,12 @@ const CharList = (props) => {
                         props.onCharSelected(item.id);
                         focusOnItem(i);
                     }}
-                        onKeyPress={(e) => {
-                            if(e.key === '' || e.key === "Enter") {
-                                props.onCharSelected(item.id);
-                                focusOnItem(i);
-                            }
-                        }}>
+                    onKeyPress={(e) => {
+                        if (e.key === ' ' || e.key === "Enter") {
+                            props.onCharSelected(item.id);
+                            focusOnItem(i);
+                        }
+                    }}>
                         <img src={item.thumbnail} alt={item.name} style={imgStyle}/>
                         <div className="char__name">{item.name}</div>
                 </li>
@@ -92,7 +92,6 @@ const CharList = (props) => {
     const errorMessage = error ? <ErrorMessage/> : null;
     const spinner = loading && !newItemLoading ? <Spinner/> : null;
 
-
     return (
         <div className="char__list">
             {errorMessage}
@@ -109,10 +108,8 @@ const CharList = (props) => {
     )
 }
 
-
 CharList.propTypes = {
     onCharSelected: PropTypes.func.isRequired
 }
-
 
 export default CharList;
