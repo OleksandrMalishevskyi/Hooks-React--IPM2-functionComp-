@@ -1,10 +1,10 @@
-# Getting Started with Create React App
+# React project on Hooks using open API
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Open API [Marvel API](https://developer.marvel.com/).
 
-## Available Scripts
+## Link to project
 
-In the project directory, you can run:
+http://OleksandrMalishevskyi.github.io/Hooks-React--IPM2-functionComp-/
 
 ### `npm start`
 
